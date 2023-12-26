@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+
+    <AssemblyName>OpilioCraft.FSharp.PowerShell</AssemblyName>
+    <RootNamespace>OpilioCraft.FSharp.PowerShell</RootNamespace>
+
+    <PackageId>OpilioCraft.FSharp.PowerShell</PackageId>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Description>Simplifies PowerShell cmdlets implementation.</Description>
+    <Authors>Carsten Schäfer</Authors>
+    <Copyright>Copyright (c) 2023 by Carsten Schäfer</Copyright>
+    <RepositoryUrl>https://github.com/EinQuadrat/OpilioCraft.FSharp.PowerShell.git</RepositoryUrl>
+    <PackageTags>OpilioCraft;FSharp;PowerShell</PackageTags>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+    <RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Assert.fs" />
+    <Compile Include="ExceptionExtension.fs" />
+    <Compile Include="CmdletExtension.fs" />
+    <Compile Include="PathAwareCommand.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpilioCraft.FSharp.Prelude" Version="5.0.1" />
+    <PackageReference Include="PowerShellStandard.Library" Version="5.1.1" />
+  </ItemGroup>
+
+</Project>
