@@ -29,8 +29,8 @@ type public PathSupportingCommand () =
 
     member x.ResolvePath = x.GetResolvedProviderPathFromPSPath >> fst
 
-    override x.ProcessRecord () =
-        base.ProcessRecord ()
+    override x.ProcessRecord() =
+        base.ProcessRecord()
 
         try
             match x.TypedParameterSet with
@@ -68,4 +68,4 @@ and TypedParameterSet =
 type public PathExpectingCommand () =
     inherit PathSupportingCommand ()
 
-    override _.ProcessNonPath () = raise <| InvalidOperationException()
+    override _.ProcessNonPath() = raise <| InvalidOperationException()
